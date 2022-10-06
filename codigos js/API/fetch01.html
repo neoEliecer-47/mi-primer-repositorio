@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container my-5">
+        <!-- Spinner cargando -->
+        <section class="d-flex aling-items-center d-none" id="loading">
+            <strong>Cargando...</strong>
+            <div
+                class="spinner-border ms-auto"
+                role="status"
+                aria-hidden="true"
+            ></div>
+
+
+        </section>
+
+        
+        
+        
+        
+        <section class="row" id="cards-dinamicas">
+            
+        </section>
+        
+    </div>
+    
+    <div id="paginacion"></div>
+    
+    <template id="template-paginacion">
+        
+        
+        <section class="my-4 d-flex justify-content-between">
+            <button class="btn btn-outline-secondary rounded-pill">Preview</button>
+            <button class="btn btn-outline-primary rounded-pill">Next</button>
+        </section>
+        
+        </template>
+        
+        
+        <template id="template-card">
+            
+            <article class="col-12 col-md-6 col-lg-33 mb-3">
+
+                <div class="card text-center shadow">
+                    
+                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" 
+                    alt="" 
+                    class="card-img-top "
+                    >
+                    
+                    <div class="card-body">
+                        <h5 class="card-title text-primary lead">
+                            Nombre personaje
+                        </h5>
+                        <p class="lead text-secondary">human</p>
+                    </div>
+                </div>
+            
+            </article>
+            
+        </template>
+        
+<script src="fetch01.js"></script>
+</body>
+</html>
+
+
+
+        

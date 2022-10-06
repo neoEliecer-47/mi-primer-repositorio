@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0"   >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">
+            hola, soy un documento en html
+        </h1>
+        <p id="parrafo">El Real Madrid, el club mas grande del mundo!</p>
+        <button id="boton" class="btn btn-info"  >Cambiar</button>
+    </div>
+    <script>
+        var h1 = document.getElementById("titulo");
+        console.log(h1.innerHTML);
+        h1.innerHTML = "Siiiiuuuuuuuu";
+        h1.style.color = "white";
+        h1.style.background = "purple";
+
+        var parrafo = document.getElementById("parrafo");
+
+        var boton = document.getElementById("boton");
+            boton.addEventListener('mouseover',function(){
+                console.log('he detectado el raton');
+            });
+
+            boton.addEventListener('mouseout',function(){
+                console.log('adios raton');
+            });
+   
+   const mensaje = (nombre) => {
+    return 'hola soy eliecer';
+   }
+   
+    const message = mensaje();   
+    console.log(message);
+   
+    function mensaje2(){
+    alert('ELIECER');
+
+   }
+   boton.onclick = mensaje2;
+   //funciones de flecha
+   const numero6 = (num1, num2) => resultado1 = `el numero es: ${num1 + num2} `
+    
+   
+   const resultado2 = numero6(25,10)
+   console.log(resultado2)
+
+//objetos
+   const mascota = {
+    nombre: 'Tom',
+    sexo: 'masculino',
+    edad: 10,
+    vivo: true
+}
+   
+console.log(mascota.nombre)
+
+mascota.id = 123
+mascota.crias=['manchito','peludo','tomi']
+
+//console.log(mascota.crias);
+console.log(mascota.crias[1])
+
+const {vivo} = mascota
+console.log(vivo)
+
+const web = {
+    nombre: 'Liter',
+    links:{
+        enlace: 'Literland.com'
+    },
+    redesSociales:{
+        youTube:{
+            enlace: 'www.youtube.com/Literland',
+            nombre: 'Literland yt'
+        }
+    }
+}
+console.log(web.redesSociales.youTube.enlace)
+console.log(web.redesSociales.youTube.nombre)
+
+
+//reduccion de codigo con destrucyuting object
+const {enlace,nombre} = web.redesSociales.youTube
+console.log(enlace, nombre)
+
+//fetch
+
+fetch('https://pokeapi.co/api/v2/pokemon/')
+.then( res => res.json())
+
+.then(data =>{
+    let arrayNombres = []
+    //console.log(data.results)
+    data.results.forEach(element => {
+        arrayNombres.push(element.name)
+       
+    });
+    //console.log(arrayNombres)
+})
+.catch(error => console.log(error))
+
+//async & await
+
+const obtenerPokemones = async() =>{
+    try {
+        
+    const res =  await fetch('https://pokeapi.co/api/v2/pokemon/')
+    const data= await res.json()
+    //console.log(data.results)
+    let arrayPokes = data.results.map(poke => poke.name)
+    //console.log(arrayPokes)
+    
+} catch (error) {
+        console.log(error)
+    }
+}
+
+//obtenerPokemones()
+
+
+
+
+const obtenerPokemones2 = async() =>{
+    try {
+        
+    const res =  await fetch('https://pokeapi.co/api/v2/pokemon/')
+    const data= await res.json()
+    //console.log(data.results)
+    let arrayPokes = data.results.filter(poke => poke.name !== "bulbasaur")
+    console.log(arrayPokes)
+    
+} catch (error) {
+        console.log(error)
+    }
+}
+
+obtenerPokemones2()
+
+//clg atajo
+
+var h = "47"
+var g=Number(h)
+console.log(h)
+console.log(g)
+
+//https://github.com/You-Dont-Know-JS-ES/Traduccion/blob/master/up%20%26%20going/ch1.md
+
+
+
+//function cambiar(){
+      //  parrafo.style.background="blue";
+    //}
+    
+   //boton.onclick= cambiar; 
+    
+    
+    </script>
+    
+</body> 
+</html>

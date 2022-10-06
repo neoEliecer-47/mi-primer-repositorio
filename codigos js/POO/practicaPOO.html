@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+    <title>Document</title>
+</head>
+<body>
+   <div class="container my-5">
+    <h1>Estudiantes y Profesores</h1>
+   <div class="alert alert-danger border-dark d-none">por favor, escriba todos los datos</div>
+   <div class="alert alert-warning border-danger d-none">correo ya existente, pruebe con otro</div>
+    <form id="formulario">
+    
+        <input 
+        type="text" 
+        class="form-control mb-2 border-success"
+        value="juanito"
+        placeholder="ingrese nombre"
+        name="nombre"
+        
+        >
+
+        <input 
+        type="number" 
+        class="form-control mb-2 border-success"
+        value="25"
+        placeholder="ingrese edad"
+        name="edad"
+        
+        >
+
+        <input 
+            class="form-control mb-2 border-primary" 
+            type="email"
+            name="userEmail"
+            placeholder="Ingrese correo"
+            id="userEmail"
+            autocomplete="off"
+            
+            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+            title="ingresa un correo válido"
+            >
+
+        <select class="form-select mb-3 border-primary" name="opcion">
+            
+            <option value="Estudiante" selected>Estudiante</option>
+            <option value="Profesor">Profesor</option>
+           
+          </select>
+
+          <button class="btn btn-lg btn-primary rounded-pill align-center d-grid gap-2 col-6 mx-auto" type="submit">Agregar</button>
+
+   </form>
+
+   <section class="row mt-4">
+
+        <div class="col-6" id="cardsEstudiantes">
+            
+            <!-- aqui va template estudiante de forma dinamica-->
+            
+        </div>
+        
+        <div class="col-6" id="cardsProfesores">
+            
+            <!-- aqui va template profesor de forma dinamica-->
+        
+        </div>
+        
+        
+        
+    </section>
+    
+</div>
+
+<template id="templateEstudiantes">
+    
+        <article class="card mb-2">
+        <card-body>
+            <h5>
+                <span class="text-primary">Nombre</span>
+                    <span class="badge bg-success rounded-pill">Aprobado</span>
+                </h5>
+                <h6>Estudiante</h6>
+                <p class="lead">Edad: </p>
+                <p class="text-dark flex-column">correo</p>
+                <button class="btn btn-success">Aprobar</button>
+                <button class="btn btn-danger">Reprobar</button>
+            </card-body>
+        </article>
+        
+</template>
+    
+    
+<template id="templateProfesores">
+        
+        <article class="card mb-2 bg-dark text-white">
+            <div class="card-body">
+                <h5>nombre</h5>
+                <h6>profesor</h6>
+                <p class="lead">edad</p>
+                <h6>correo<h6>
+            </div>
+        </article>
+        
+</template>
+
+<script src="practicaPOO.js"></script>
+</body>
+</html>

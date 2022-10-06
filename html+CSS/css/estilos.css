@@ -1,0 +1,32 @@
+#unico{
+    color: blueviolet;
+    font-size: 50px;
+    margin-left: 100px;
+    margin-bottom: 85px;
+    margin-top: 15px;
+    margin-right: 150px;
+}
+h2{
+    color: blue;
+    font-size: 30px;
+    margin: 100px 100px;
+}
+.yellow{
+    color: yellow;
+    font-size: 20px;
+}
+.fondo{
+    background: #444;
+    margin: 150px;
+}
+
+.color{
+    color: rgb(60, 117, 71);
+    margin: 200px 150px;
+}
+
+.exa{
+    color: #87CEFA;
+    background: #8758FF;
+    padding: 85px;
+}
